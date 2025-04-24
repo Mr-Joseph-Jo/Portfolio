@@ -17,12 +17,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-<url>
-    <loc>https://josephjo.me/blog/websites-crypto-currency.html</loc>
-    <lastmod>2025-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Miscellaneous -->
   <url>
@@ -36,7 +30,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://josephjo.me/go.html</loc>
+    <loc>https://josephjo.me/go</loc>
     <lastmod>2024-08-07</lastmod>
     <priority>0.8</priority>
   </url>
