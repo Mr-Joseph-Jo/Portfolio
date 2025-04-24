@@ -44,8 +44,20 @@
           <div class="col-lg-4 col-md-6">
             <h4>Networking Tools</h4>
             <ul class="list-unstyled">
-              <li><a href="https://download.glasswire.com/GlassWireSetup.exe" target="_blank">GlassWire Download</a></li>
-              <li><a href="https://openspeedtest.com/" target="_blank">OpenSpeedTest</a></li>
+              <li>
+                <a href="https://josephjo.me/go/GlassWire" target="_blank">GlassWire Download</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/GlassWire" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
+              <li>
+                <a href="https://josephjo.me/go/openspeed" target="_blank">OpenSpeedTest</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/openspeed" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -53,8 +65,20 @@
           <div class="col-lg-4 col-md-6">
             <h4>Developer Tools</h4>
             <ul class="list-unstyled">
-              <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-              <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+              <li>
+                <a href="https://josephjo.me/go/vscode" target="_blank">Visual Studio Code</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/vscode" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
+              <li>
+                <a href="https://josephjo.me/go/Github" target="_blank">GitHub</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/Github" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -62,8 +86,20 @@
           <div class="col-lg-4 col-md-6">
             <h4>Other Resources</h4>
             <ul class="list-unstyled">
-              <li><a href="/tools/password-generator" target="_blank">Password Generator</a></li>
-              <li><a href="/blog/websites-crypto-currency" target="_blank">Crypto-Friendly Websites</a></li>
+              <li>
+                <a href="https://josephjo.me/go/passgen" target="_blank">Password Generator</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/passgen" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
+              <li>
+                <a href="https://josephjo.me/go/Linkedin" target="_blank">Linkedin</a>
+                <div class="link-box d-flex align-items-center mt-2">
+                  <input type="text" class="form-control link-text" value="https://josephjo.me/go/Linkedin" readonly>
+                  <button class="btn btn-outline-secondary copy-btn ms-2" onclick="copyToClipboard(this)">Copy</button>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -87,6 +123,19 @@
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    function copyToClipboard(button) {
+      const input = button.previousElementSibling;
+      input.select();
+      input.setSelectionRange(0, 99999); // For mobile devices
+      navigator.clipboard.writeText(input.value).then(() => {
+        button.textContent = 'Copied';
+        setTimeout(() => {
+          button.textContent = 'Copy';
+        }, 2000); // Reset to "Copy" after 2 seconds
+      });
+    }
+  </script>
 </body>
 
 </html>
