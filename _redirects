@@ -1,12 +1,2 @@
-# Redirect /projects to /projects.html for clean URLs
-/projects      /projects.html     301
-
-# Redirect /portfolio to /portfolio.html for clean URLs
-/portfolio     /portfolio.html    301
-
-# Optional: Remove .html from top-level pages (uncomment if desired)
-#/about        /about.html        301
-#/contact      /contact.html      301
-
-# Home page (optional, usually handled automatically)
-/             /index.html        301
+/projects     /projects.html     301
+/portfolio    /portfolio.html    301
