@@ -31,24 +31,31 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center; /* Center title and description vertically */
       align-items: flex-start;
       background: #fff;
       opacity: 1 !important;
       pointer-events: auto;
       transition: none !important;
       visibility: visible !important;
+      position: static !important;
     }
     .project-fixed-box .portfolio-info h4 {
       margin-bottom: 8px;
       margin-top: 0;
       font-size: 1.25rem;
       font-weight: 600;
+      opacity: 1 !important;
+      transition: none !important;
+      position: static !important;
     }
     .project-fixed-box .portfolio-info p {
+      margin-bottom: 12px;
       font-size: 1rem;
       color: #444;
-      /* Remove flex:1 so description doesn't get pushed down */
+      opacity: 1 !important;
+      transition: none !important;
+      position: static !important;
     }
     .project-fixed-box .portfolio-actions {
       margin-top: auto;
@@ -66,18 +73,27 @@
     .project-fixed-box .details-link:hover {
       color: #007bff;
     }
+    /* Remove any fade-in, zoom, or image hover effects, and all project-card hover movement */
     .portfolio-wrap,
     .portfolio-wrap:hover,
     .portfolio-wrap:focus,
     .project-fixed-box:hover,
     .project-fixed-box:focus,
     .portfolio-wrap img:hover,
-    .portfolio-wrap img:focus {
-      box-shadow: 0 2px 16px 0 rgba(30,30,60,0.07);
+    .portfolio-wrap img:focus,
+    .portfolio-wrap:hover .portfolio-info,
+    .project-fixed-box:hover .portfolio-info {
+      box-shadow: 0 2px 16px 0 rgba(30,30,60,0.07) !important;
       transform: none !important;
       opacity: 1 !important;
       filter: none !important;
       transition: none !important;
+      position: static !important;
+      top: auto !important;
+      bottom: auto !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      visibility: visible !important;
     }
     @media (max-width: 991px) {
       .project-fixed-box {
