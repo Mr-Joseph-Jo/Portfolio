@@ -77,6 +77,52 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom CSS for Fixed Card Size -->
+  <style>
+    .project-fixed-box {
+      height: 470px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px 0 rgba(30,30,60,0.07);
+      margin-bottom: 24px;
+    }
+    .project-fixed-box img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    .project-fixed-box .portfolio-info {
+      flex: 1;
+      padding: 18px 18px 0 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (max-width: 991px) {
+      .project-fixed-box {
+        height: 510px;
+      }
+      .project-fixed-box img {
+        height: 240px;
+      }
+    }
+    @media (max-width: 767px) {
+      .project-fixed-box {
+        height: auto;
+      }
+      .project-fixed-box img {
+        height: 200px;
+      }
+    }
+  </style>
+
   <link rel="canonical" href="https://josephjo.me/projects.html">
 </head>
 
@@ -95,7 +141,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -128,28 +174,47 @@
       </div>
       <div class="container">
         <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-          <!-- Example Project Item -->
+          <!-- Project 1 -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <img src="assets/img/projects/project-1.webp" class="img-fluid" alt="Project 1" loading="lazy">
-            <div class="portfolio-info">
-              <h4>Sample Project 1</h4>
-              <p>Short description goes here.</p>
-              <a href="assets/img/projects/project-1.webp" data-gallery="projects-gallery" class="glightbox preview-link" title="Project 1"></a>
-              <a href="https://github.com/Mr-Joseph-Jo/SampleProject1" target="_blank" class="details-link" title="Project Repo"><i class="bi bi-link-45deg"></i></a>
+            <div class="portfolio-wrap project-fixed-box">
+              <a href="https://github.com/Mr-Joseph-Jo/OCR-Handwriting" target="_blank" rel="noopener">
+                <img src="assets/img/projects/project-1.jpg" class="img-fluid" alt="OCR-Handwriting" loading="lazy">
+              </a>
+              <div class="portfolio-info">
+                <h4>OCR-Handwriting</h4>
+                <p>OCR-Handwriting is a Flutter-based application designed to perform Optical Character Recognition (OCR) on handwritten text. The app allows users to capture handwritten notes, process them, and save them as digital text for easy access and management.</p>
+                <div>
+                  <a href="assets/img/projects/project-1.jpg" data-gallery="projects-gallery" class="glightbox preview-link" title="OCR-Handwriting">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://github.com/Mr-Joseph-Jo/OCR-Handwriting" target="_blank" rel="noopener" class="details-link" title="View on GitHub">
+                    <i class="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Repeat above block for more projects -->
+          <!-- Project 2 -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <img src="assets/img/projects/project-1.webp" class="img-fluid" alt="Project 2" loading="lazy">
-            <div class="portfolio-info">
-              <h4>Sample Project 2</h4>
-              <p>Short description goes here.</p>
-              <a href="assets/img/projects/project-1.webp" data-gallery="projects-gallery" class="glightbox preview-link" title="Project 2"></a>
-              <a href="https://github.com/Mr-Joseph-Jo/SampleProject2" target="_blank" class="details-link" title="Project Repo"><i class="bi bi-link-45deg"></i></a>
+            <div class="portfolio-wrap project-fixed-box">
+              <a href="https://github.com/Mr-Joseph-Jo/EduTrackr" target="_blank" rel="noopener">
+                <img src="assets/img/projects/project-2.jpg" class="img-fluid" alt="EduTrackr" loading="lazy">
+              </a>
+              <div class="portfolio-info">
+                <h4>EduTrackr</h4>
+                <p>EduTrackr is a comprehensive solution aimed at simplifying academic management for teachers and administrators. By bridging the gap between traditional assessment methods and modern technology, EduTrackr supports educational institutions in achieving excellence and improving student outcomes.</p>
+                <div>
+                  <a href="assets/img/projects/project-2.jpg" data-gallery="projects-gallery" class="glightbox preview-link" title="EduTrackr">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://github.com/Mr-Joseph-Jo/EduTrackr" target="_blank" rel="noopener" class="details-link" title="View on GitHub">
+                    <i class="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Add more projects as needed -->
-           
+          <!-- Add more projects as needed using the same structure -->
         </div>
       </div>
     </section>
