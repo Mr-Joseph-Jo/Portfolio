@@ -2,11 +2,18 @@
 <html lang="en">
 
 <head>
-  <!-- ... (head code as before) ... -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects | Joseph Jo</title>
+  <meta name="description" content="A showcase of Joseph Jo's projects. Web, mobile, and open source projects by Joseph Jo.">
+  <meta name="keywords" content="Joseph Jo, Projects, Portfolio, Web Development, Open Source, Developer">
+  <meta name="author" content="Joseph Jo">
+  <meta name="robots" content="index, follow">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="canonical" href="https://josephjo.me/projects.html">
   <style>
     .project-fixed-box {
       height: 470px;
@@ -31,7 +38,7 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Center title and description vertically */
+      justify-content: center;
       align-items: flex-start;
       background: #fff;
       opacity: 1 !important;
@@ -73,7 +80,20 @@
     .project-fixed-box .details-link:hover {
       color: #007bff;
     }
-    /* Remove any fade-in, zoom, or image hover effects, and all project-card hover movement */
+    /* Remove underline from nav links on hover and active */
+    .navmenu a,
+    .navmenu a:hover,
+    .navmenu a.active,
+    .navmenu a::after,
+    .navmenu a.active::after,
+    .navmenu a:hover::after {
+      border-bottom: none !important;
+      background: none !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+      width: auto !important;
+      transition: none !important;
+    }
     .portfolio-wrap,
     .portfolio-wrap:hover,
     .portfolio-wrap:focus,
@@ -112,7 +132,6 @@
       }
     }
   </style>
-  <link rel="canonical" href="https://josephjo.me/projects.html">
 </head>
 
 <body class="index-page">
@@ -130,7 +149,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
