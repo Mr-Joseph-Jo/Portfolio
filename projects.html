@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://josephjo.me/projects.html">
   <style>
     .project-fixed-box {
-      height: 470px;
+      height: 280px;
       display: flex;
       flex-direction: column;
       background: #fff;
@@ -25,20 +25,12 @@
       box-shadow: 0 2px 16px 0 rgba(30,30,60,0.07);
       margin-bottom: 24px;
     }
-    .project-fixed-box img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-      transition: none !important;
-    }
     .project-fixed-box .portfolio-info {
       flex: 1;
-      padding: 18px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       background: #fff;
       opacity: 1 !important;
@@ -48,7 +40,7 @@
       position: static !important;
     }
     .project-fixed-box .portfolio-info h4 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       margin-top: 0;
       font-size: 1.25rem;
       font-weight: 600;
@@ -58,7 +50,7 @@
     }
     .project-fixed-box .portfolio-info p {
       margin-bottom: 12px;
-      font-size: 1rem;
+      font-size: 0.97rem;
       color: #444;
       opacity: 1 !important;
       transition: none !important;
@@ -70,17 +62,41 @@
       display: flex;
       gap: 8px;
     }
-    .project-fixed-box .details-link {
+    .project-fixed-box a.card-link {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+    }
+    .project-fixed-box a.card-link:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+    .project-fixed-box {
+      transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .project-fixed-box:hover {
+      transform: translateY(-8px) !important;
+      box-shadow: 0 16px 40px 0 rgba(30,30,60,0.16) !important;
+      cursor: pointer;
+    }
+    .project-fixed-box .details-link,
+    .project-fixed-box .details-link:hover,
+    .project-fixed-box .details-link:focus {
       color: #222;
       font-size: 1.5rem;
       margin-right: 8px;
-      transition: color 0.18s;
       text-decoration: none;
+      display: inline-block;
+      transform: none !important;
+      transition: none !important;
+      position: static !important;
+      left: auto !important;
+      top: auto !important;
+      padding: 0 !important;
+      margin-left: 0 !important;
     }
-    .project-fixed-box .details-link:hover {
-      color: #007bff;
-    }
-    /* Remove underline from nav links on hover and active */
     .navmenu a,
     .navmenu a:hover,
     .navmenu a.active,
@@ -97,17 +113,12 @@
     .portfolio-wrap,
     .portfolio-wrap:hover,
     .portfolio-wrap:focus,
-    .project-fixed-box:hover,
     .project-fixed-box:focus,
-    .portfolio-wrap img:hover,
-    .portfolio-wrap img:focus,
     .portfolio-wrap:hover .portfolio-info,
     .project-fixed-box:hover .portfolio-info {
       box-shadow: 0 2px 16px 0 rgba(30,30,60,0.07) !important;
-      transform: none !important;
       opacity: 1 !important;
       filter: none !important;
-      transition: none !important;
       position: static !important;
       top: auto !important;
       bottom: auto !important;
@@ -115,28 +126,14 @@
       margin-bottom: 0 !important;
       visibility: visible !important;
     }
-    @media (max-width: 991px) {
-      .project-fixed-box {
-        height: 510px;
-      }
-      .project-fixed-box img {
-        height: 240px;
-      }
-    }
-    @media (max-width: 767px) {
-      .project-fixed-box {
-        height: auto;
-      }
-      .project-fixed-box img {
-        height: 200px;
-      }
+    #preloader {
+      display: none !important;
     }
   </style>
 </head>
 
 <body class="index-page">
 
-  <!-- ======= Header/Navbar ======= -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -157,10 +154,8 @@
 
     </div>
   </header>
-  <!-- End Header/Navbar -->
 
   <main class="main">
-    <!-- ======= Projects Grid Section ======= -->
     <section id="projects" class="portfolio section">
       <div class="container section-title">
         <h2>Projects</h2>
@@ -168,47 +163,58 @@
       </div>
       <div class="container">
         <div class="row gy-4 isotope-container">
+
           <!-- Project 1 -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-wrap project-fixed-box">
-              <a href="https://github.com/Mr-Joseph-Jo/OCR-Handwriting" target="_blank" rel="noopener">
-                <img src="assets/img/projects/project-1.webp" class="img-fluid" alt="OCR-Handwriting" loading="lazy">
-              </a>
-              <div class="portfolio-info">
-                <h4>OCR-Handwriting</h4>
-                <p>OCR-Handwriting is a Flutter-based application designed to perform Optical Character Recognition (OCR) on handwritten text. The app allows users to capture handwritten notes, process them, and save them as digital text for easy access and management.</p>
-                <div class="portfolio-actions">
-                  <a href="https://github.com/Mr-Joseph-Jo/OCR-Handwriting" target="_blank" rel="noopener" class="details-link" title="View on GitHub">
-                    <i class="bi bi-github"></i>
-                  </a>
+              <a href="https://github.com/Mr-Joseph-Jo/OCR-Handwriting" target="_blank" rel="noopener" class="card-link">
+                <div class="portfolio-info">
+                  <h4>OCR-Handwriting</h4>
+                  <p>OCR-Handwriting is a Flutter-based application designed to perform Optical Character Recognition (OCR) on handwritten text. The app allows users to capture handwritten notes, process them, and save them as digital text for easy access and management.</p>
+                  <div class="portfolio-actions">
+                    <i class="bi bi-github details-link"></i>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
+
           <!-- Project 2 -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-wrap project-fixed-box">
-              <a href="https://github.com/Mr-Joseph-Jo/EduTrackr" target="_blank" rel="noopener">
-                <img src="assets/img/projects/project-2.webp" class="img-fluid" alt="EduTrackr" loading="lazy">
-              </a>
-              <div class="portfolio-info">
-                <h4>EduTrackr</h4>
-                <p>EduTrackr is a comprehensive solution aimed at simplifying academic management for teachers and administrators. By bridging the gap between traditional assessment methods and modern technology, EduTrackr supports educational institutions in achieving excellence and improving student outcomes.</p>
-                <div class="portfolio-actions">
-                  <a href="https://github.com/Mr-Joseph-Jo/EduTrackr" target="_blank" rel="noopener" class="details-link" title="View on GitHub">
-                    <i class="bi bi-github"></i>
-                  </a>
+              <a href="https://github.com/Mr-Joseph-Jo/EduTrackr" target="_blank" rel="noopener" class="card-link">
+                <div class="portfolio-info">
+                  <h4>EduTrackr</h4>
+                  <p>EduTrackr is a comprehensive solution aimed at simplifying academic management for teachers and administrators. By bridging the gap between traditional assessment methods and modern technology, EduTrackr supports educational institutions in achieving excellence and improving student outcomes.</p>
+                  <div class="portfolio-actions">
+                    <i class="bi bi-github details-link"></i>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
+
+          <!-- Project 3: Smart Surveillance Framework -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-wrap project-fixed-box">
+              <a href="https://github.com/Mr-Joseph-Jo/SSF-Vision" target="_blank" rel="noopener" class="card-link">
+                <div class="portfolio-info">
+                  <h4>Smart Surveillance Framework</h4>
+                  <p>SSF-Vision is an intelligent surveillance system built for real-time monitoring and threat detection. It leverages computer vision and AI to enable smart camera feeds, automated alerts, and event logging — designed for scalable, self-hosted deployment.</p>
+                  <div class="portfolio-actions">
+                    <i class="bi bi-github details-link"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <!-- Add more projects as needed using the same structure -->
+
         </div>
       </div>
     </section>
-    <!-- End Projects Grid Section -->
 
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section">
       <div class="container section-title">
         <h2>Contact</h2>
@@ -239,7 +245,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Me</h3>
-                  <p>Owner@josephjo.me</p>
+                  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96d9e1f8f3e4d6fcf9e5f3e6fefcf9b8fbf3">[email&#160;protected]</a></p>
                 </div>
               </div>
             </div>
@@ -247,13 +253,12 @@
         </div>      
       </div>
     </section>
-    <!-- End Contact Section -->
 
   </main>
 
   <footer id="footer" class="footer accent-background">
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Joseph Jo</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -274,15 +279,9 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+  <script src="assets/vendor/imagesloaded/imagesloade
